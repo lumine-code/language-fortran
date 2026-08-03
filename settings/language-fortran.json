@@ -1,0 +1,17 @@
+{
+  ".source.fortran": {
+    "language": {
+      "commentStart": "! ",
+      // Fortran opens a block with a statement and closes it with `end …`, so
+      // the generated brace patterns do not apply. `(?i)` because the language
+      // is case-insensitive and `END DO` is as common as `end do`.
+      "increaseIndentPattern": "(?i)^\\s*(\\w+\\s*:\\s*)?(program|module|submodule|subroutine|function|interface|block|associate|enum|critical|contains|forall|where|do|if\\b.*\\bthen|else|select\\s*(case|type|rank)|type\\s*(,|::))\\b",
+      "decreaseIndentPattern": "(?i)^\\s*(end\\b|else\\b|elsewhere\\b|case\\b|class\\s+is\\b|type\\s+is\\b|contains\\b)"
+    },
+    "bracket-matcher": {
+      // Fortran has no curly braces, and `'` is a string delimiter rather than
+      // an apostrophe, so it is worth auto-pairing.
+      "autocompleteCharacters": ["()", "[]", "\"\"", "''"]
+    }
+  }
+}

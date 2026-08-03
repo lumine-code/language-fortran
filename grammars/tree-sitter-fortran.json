@@ -1,0 +1,24 @@
+{
+  "name": "Fortran",
+  "scopeName": "source.fortran",
+  "type": "tree-sitter",
+  "parser": "tree-sitter-fortran",
+  "injectionRegex": "^(fortran)$",
+  "fileTypes": ["f", "f90", "f95", "f03", "f08", "f77", "for", "fpp"],
+  "comments": {
+    "start": "! "
+  },
+  "treeSitter": {
+    // Pin a tag or a full SHA, never a branch. Verify the ref is on the main
+    // line before trusting it — `gh api repos/OWNER/REPO/compare/<ref>...HEAD`
+    // reporting `diverged` or a nonzero `behind` means it is not.
+    "parserSource": "github:stadelmanma/tree-sitter-fortran#v0.6.0",
+    "wasmBuildTool": "tree-sitter-cli#v0.26.11",
+    "grammar": "tree-sitter-fortran/tree-sitter-fortran.wasm",
+    "highlightsQuery": "tree-sitter-fortran/highlights.scm",
+    "foldsQuery": "tree-sitter-fortran/folds.scm",
+    "indentsQuery": "tree-sitter-fortran/indents.scm",
+    "tagsQuery": "tree-sitter-fortran/tags.scm",
+    "localsQuery": "tree-sitter-fortran/locals.scm"
+  }
+}
