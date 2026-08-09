@@ -10,9 +10,9 @@ describe("Fortran sample fixture", () => {
   let editor;
 
   beforeEach(async () => {
-    await atom.packages.activatePackage("language-fortran");
-    atom.config.set("language.useTreeSitterParsers", true);
-    editor = await atom.workspace.open(path.join(__dirname, "fixtures", "sample.f90"));
+    await lumine.packages.activatePackage("language-fortran");
+    lumine.config.set("language.useTreeSitterParsers", true);
+    editor = await lumine.workspace.open(path.join(__dirname, "fixtures", "sample.f90"));
     await editor.getBuffer().getLanguageMode().ready;
   });
 
