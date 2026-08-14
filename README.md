@@ -10,12 +10,12 @@ Fortran language support.
 
 ## Installation
 
-To install `language-fortran` search for _language-fortran_ in the Install pane of the Lumine settings or run `lumine --install lumine-code/language-fortran`.
+To install `language-fortran` search for it in the Install pane of the Lumine settings, or run the command `lumine --install lumine-code/language-fortran`.
 
 ## Services
 
-- **hyperlink.injection** (`^1.0.0`): consumed to highlight URLs inside Fortran files as clickable links.
-- **todo.injection** (`^1.0.0`): consumed to highlight `TODO`-style markers inside comments.
+- `hyperlink.injection`: consumed to highlight URLs inside Fortran files as clickable links.
+- `todo.injection`: consumed to highlight `TODO`-style markers inside comments.
 
 ## Contributing
 
