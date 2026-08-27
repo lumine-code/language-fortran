@@ -11,7 +11,7 @@ describe("Fortran sample fixture", () => {
 
   beforeEach(async () => {
     await lumine.packages.activatePackage("language-fortran");
-    lumine.config.set("language.useTreeSitterParsers", true);
+    lumine.config.set("editor.useTreeSitterParsers", true);
     editor = await lumine.workspace.open(path.join(__dirname, "fixtures", "sample.f90"));
     await editor.getBuffer().getLanguageMode().ready;
   });
