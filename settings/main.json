@@ -6,9 +6,7 @@
       "autocompleteCharacters": ["()", "[]", "\"\"", "''"]
     },
     "editor": {
-      "commentStart": "! ",
-      "increaseIndentPattern": "(?i)^\\s*(\\w+\\s*:\\s*)?(program|module|submodule|subroutine|function|interface|block|associate|enum|critical|contains|forall|where|do|if\\b.*\\bthen|else|select\\s*(case|type|rank)|type\\s*(,|::))\\b",
-      "decreaseIndentPattern": "(?i)^\\s*(end\\b|else\\b|elsewhere\\b|case\\b|class\\s+is\\b|type\\s+is\\b|contains\\b)"
+      "commentStart": "! "
     }
   }
 }

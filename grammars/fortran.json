@@ -3,7 +3,7 @@
   "scopeName": "source.fortran",
   "type": "tree-sitter",
   "parser": "tree-sitter-fortran",
-  "injectionRegex": "^(fortran)$",
+  "injectionNames": ["fortran"],
   "fileTypes": ["f", "f90", "f95", "f03", "f08", "f77", "for", "fpp"],
   "comments": {
     "start": "! "
@@ -14,11 +14,11 @@
     // reporting `diverged` or a nonzero `behind` means it is not.
     "parserSource": "github:stadelmanma/tree-sitter-fortran#v0.6.0",
     "wasmBuildTool": "tree-sitter-cli#v0.26.13",
-    "grammar": "tree-sitter-fortran/tree-sitter-fortran.wasm",
-    "highlightsQuery": "tree-sitter-fortran/highlights.scm",
-    "foldsQuery": "tree-sitter-fortran/folds.scm",
-    "indentsQuery": "tree-sitter-fortran/indents.scm",
-    "tagsQuery": "tree-sitter-fortran/tags.scm",
-    "localsQuery": "tree-sitter-fortran/locals.scm"
+    "grammar": "fortran.wasm",
+    "highlightsQuery": "fortran-highlights.scm",
+    "foldsQuery": "fortran-folds.scm",
+    "indentsQuery": "fortran-indents.scm",
+    "tagsQuery": "fortran-tags.scm",
+    "localsQuery": "fortran-locals.scm"
   }
 }
