@@ -11,7 +11,8 @@
 (statement_label) @constant.numeric.fortran
 (statement_label_reference) @constant.numeric.fortran
 (boolean_literal) @constant.language.boolean.fortran
-(comment) @comment.line.exclamation.fortran
+((comment) @comment.line.exclamation.fortran
+  (#set! adjust.endBeforeFirstMatchOf "\\r?$"))
 (custom_directive) @keyword.control.directive.fortran
 
 [
@@ -157,8 +158,8 @@
 
 "&" @punctuation.separator.continuation.fortran
 
-(parameters
-  (identifier) @variable.parameter.fortran)
+((identifier) @variable.parameter.fortran
+  (#is? test.childOfType parameters))
 
 (program_statement
   (name) @variable.other.fortran)
