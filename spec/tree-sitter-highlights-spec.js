@@ -50,7 +50,7 @@ describe("Fortran Tree-sitter highlights", () => {
       ),
     ).toBe(true);
 
-    const query = fs.readFileSync(HIGHLIGHTS_PATH, "utf8");
+    const query = fs.readFileSync(HIGHLIGHTS_PATH, "utf8").replaceAll("\r\n", "\n");
     expect(query).toContain(
       "((identifier) @variable.parameter.fortran\n  (#is? test.childOfType parameters))",
     );
