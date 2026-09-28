@@ -23,9 +23,9 @@ describe("Fortran sample fixture", () => {
     return editor.scopeDescriptorForBufferPosition([row, column]).getScopesArray();
   }
 
-  it("parses without error", () => {
+  it("parses without error", async () => {
     expect(editor.getGrammar().scopeName).toBe("source.fortran");
-    expect(editor.getBuffer().getLanguageMode().tree.rootNode.hasError).toBe(false);
+    expect((await editor.getSyntaxDiagnostics()).hasError).toBe(false);
   });
 
   it("scopes the punctuation this port had to split by hand", () => {
