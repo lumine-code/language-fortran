@@ -16,6 +16,7 @@
     "wasmBuildTool": "tree-sitter-cli#v0.27.0",
     "grammar": "fortran.wasm",
     "highlightsQuery": "fortran-highlights.scm",
+    "injectionsQuery": "fortran-injections.scm",
     "foldsQuery": "fortran-folds.scm",
     "indentsQuery": "fortran-indents.scm",
     "tagsQuery": "fortran-tags.scm",
