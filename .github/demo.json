@@ -1,0 +1,16 @@
+{
+  "title": "language-fortran",
+  "description": "Fortran syntax highlighting in the editor.",
+  "recordedOn": "2026-10-13",
+  "sourceRevision": "be4ab6b995a39f3c461d47e2b5ae6a2b9d75d58d",
+  "mode": "normal",
+  "fontSettings": "default",
+  "images": [
+    {
+      "file": "demo.png",
+      "label": "Fortran syntax highlighting at the default editor font size.",
+      "width": 1100,
+      "height": 820
+    }
+  ]
+}
