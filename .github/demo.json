@@ -1,16 +1,61 @@
 {
   "title": "language-fortran",
-  "description": "Fortran syntax highlighting in the editor.",
-  "recordedOn": "2026-10-13",
-  "sourceRevision": "be4ab6b995a39f3c461d47e2b5ae6a2b9d75d58d",
+  "description": "Fortran syntax highlighting at the default editor font size.",
+  "recordedOn": "2026-10-14",
+  "sourceRevision": "2c76a207f9b43e32114af7e0c4958654f8eaa1e8",
+  "themeSourceRevision": "14a69683b0e3238e2bc128fbfae3866c1e4ee9c6",
   "mode": "normal",
   "fontSettings": "default",
+  "scenario": "demo.js",
+  "recipeHash": "ef921c89af20c4a20f97469e4e8ae8ee884df7aa9dd54bccbf3cea1a318ba841",
+  "environment": {
+    "platform": "win32",
+    "arch": "x64",
+    "electron": "44.7.0",
+    "chrome": "152.0.7977.130",
+    "devicePixelRatio": 1,
+    "locale": "en-GB",
+    "fontFamily": "Fira Code, Menlo, DejaVu Sans Mono, Consolas, monospace",
+    "fontSize": 14,
+    "themes": ["one-day-syntax", "one-day-ui"]
+  },
+  "viewport": { "width": 1100, "height": 820 },
+  "cornerRadius": 10,
+  "sources": {
+    "editor": {
+      "revision": "c4d7a05fe6960ae6fb041981d6cf13e9c0286b17",
+      "dirty": true,
+      "workingTreeHash": "af0ec098e764416df9522f3c6e555050b520e4700da382b2b983b2ff3742bd0a"
+    },
+    "package": {
+      "revision": "2c76a207f9b43e32114af7e0c4958654f8eaa1e8",
+      "dirty": true,
+      "workingTreeHash": "bdabc4b1843d39d1cd37c0d6ac4b4e7ba41f2039a39c9d129be88a80d9daa91b"
+    },
+    "language-fortran": {
+      "revision": "2c76a207f9b43e32114af7e0c4958654f8eaa1e8",
+      "dirty": true,
+      "workingTreeHash": "bdabc4b1843d39d1cd37c0d6ac4b4e7ba41f2039a39c9d129be88a80d9daa91b"
+    },
+    "one-theme": {
+      "revision": "14a69683b0e3238e2bc128fbfae3866c1e4ee9c6",
+      "dirty": true,
+      "workingTreeHash": "25d6ed50595d6b10f7d53e41dbbe8f92dcb5c0e911871356f3e6138e5c76df57"
+    }
+  },
+  "fixtures": [
+    {
+      "file": "example.f90",
+      "sha256": "0fa86ef57053dd3dd1ce0e43cc8100294dbd92b0f79c7c230055a5fad824dce9"
+    }
+  ],
   "images": [
     {
       "file": "demo.png",
       "label": "Fortran syntax highlighting at the default editor font size.",
       "width": 1100,
-      "height": 820
+      "height": 820,
+      "sha256": "67db0fb70c4438c715a8929f5de53c4483c9ed2f840e4ad7937ef4f9f2de083a"
     }
   ]
 }
