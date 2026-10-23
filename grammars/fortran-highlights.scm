@@ -194,6 +194,9 @@
 (end_subroutine_statement
   (name) @entity.name.function.fortran)
 
+(end_type_statement
+  (name) @support.type.fortran)
+
 (end_module_procedure_statement
   (name) @entity.name.function.fortran)
 

@@ -1,6 +1,7 @@
 ----- BEGIN THIRD-PARTY LICENSE: parser:stadelmanma_tree-sitter-fortran -----
 Source: https://github.com/stadelmanma/tree-sitter-fortran
-Revision: v0.6.0
+Commit: c5ddc47097a9e32af0c34885d5df615fd6ba575b
+Ref: c5ddc47097a9e32af0c34885d5df615fd6ba575b
 
 Original file: LICENSE
 
