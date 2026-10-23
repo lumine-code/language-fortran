@@ -1,9 +1,9 @@
 {
   "title": "language-fortran",
   "description": "Fortran syntax highlighting at the default editor font size.",
-  "recordedOn": "2026-10-14",
-  "sourceRevision": "2c76a207f9b43e32114af7e0c4958654f8eaa1e8",
-  "themeSourceRevision": "14a69683b0e3238e2bc128fbfae3866c1e4ee9c6",
+  "recordedOn": "2026-10-23",
+  "sourceRevision": "edfc14aa57eb4966e6ea21cf7edb2063822009b1",
+  "themeSourceRevision": "28ee93b8ce627cd08f1195b59daaba126f5f05e6",
   "mode": "normal",
   "fontSettings": "default",
   "scenario": "demo.js",
@@ -11,8 +11,8 @@
   "environment": {
     "platform": "win32",
     "arch": "x64",
-    "electron": "44.7.0",
-    "chrome": "152.0.7977.130",
+    "electron": "45.0.0",
+    "chrome": "156.0.8078.48",
     "devicePixelRatio": 1,
     "locale": "en-GB",
     "fontFamily": "Fira Code, Menlo, DejaVu Sans Mono, Consolas, monospace",
@@ -21,26 +21,27 @@
   },
   "viewport": { "width": 1100, "height": 820 },
   "cornerRadius": 10,
+  "privacy": { "version": 1, "location": "neutral", "textChecked": true },
   "sources": {
     "editor": {
-      "revision": "c4d7a05fe6960ae6fb041981d6cf13e9c0286b17",
-      "dirty": true,
-      "workingTreeHash": "af0ec098e764416df9522f3c6e555050b520e4700da382b2b983b2ff3742bd0a"
+      "revision": "80f88ff6b2d7ed9af914e1e5188bd810ce36714d",
+      "dirty": false,
+      "workingTreeHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
     },
     "package": {
-      "revision": "2c76a207f9b43e32114af7e0c4958654f8eaa1e8",
-      "dirty": true,
-      "workingTreeHash": "bdabc4b1843d39d1cd37c0d6ac4b4e7ba41f2039a39c9d129be88a80d9daa91b"
+      "revision": "edfc14aa57eb4966e6ea21cf7edb2063822009b1",
+      "dirty": false,
+      "workingTreeHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
     },
     "language-fortran": {
-      "revision": "2c76a207f9b43e32114af7e0c4958654f8eaa1e8",
-      "dirty": true,
-      "workingTreeHash": "bdabc4b1843d39d1cd37c0d6ac4b4e7ba41f2039a39c9d129be88a80d9daa91b"
+      "revision": "edfc14aa57eb4966e6ea21cf7edb2063822009b1",
+      "dirty": false,
+      "workingTreeHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
     },
     "one-theme": {
-      "revision": "14a69683b0e3238e2bc128fbfae3866c1e4ee9c6",
-      "dirty": true,
-      "workingTreeHash": "25d6ed50595d6b10f7d53e41dbbe8f92dcb5c0e911871356f3e6138e5c76df57"
+      "revision": "28ee93b8ce627cd08f1195b59daaba126f5f05e6",
+      "dirty": false,
+      "workingTreeHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
     }
   },
   "fixtures": [
@@ -55,7 +56,7 @@
       "label": "Fortran syntax highlighting at the default editor font size.",
       "width": 1100,
       "height": 820,
-      "sha256": "67db0fb70c4438c715a8929f5de53c4483c9ed2f840e4ad7937ef4f9f2de083a"
+      "sha256": "4977b944e6f6db22f9feaa922ee454536d35c6f4af0a4d4699c790069a99edef"
     }
   ]
 }
