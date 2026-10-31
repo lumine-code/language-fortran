@@ -1,3 +1,20 @@
+; An unexpected quote identifies an unfinished literal, not an array opener.
+; Continuation markers anchor rows whose literal payload has no syntax node.
+(ERROR (ERROR) @_quote [(_) "&" "(" ")" "[" "]"] @preserve
+  (#match? @_quote "^[\"']$")
+  (#is? indent.reindent true)
+  (#set! indent.allowEmpty true)
+  (#set! indent.force true))
+
+(ERROR (ERROR) @_quote ["(" ")" "[" "]"] @match.next
+  (#match? @_quote "^[\"']$")
+  (#set! indent.match startPosition)
+  (#set! capture.final true))
+
+((ERROR) @match.next
+  (#match? @match.next "^[\"']$")
+  (#set! indent.match startPosition))
+
 ; Preserve the exact contents of multiline literals during explicit reindent.
 ([(string_literal) (comment)] @preserve
   (#is? indent.reindent true)
