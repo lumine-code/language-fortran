@@ -99,12 +99,13 @@
 (do_statement "do" @keyword.control.fortran)
 (while_statement "while" @keyword.control.fortran)
 (if_statement ["if" "then"] @keyword.control.fortran)
-(elseif_clause ["else" "if" "elseif"] @keyword.control.fortran)
+(elseif_clause ["else" "if" "elseif" "then"] @keyword.control.fortran)
 (else_clause "else" @keyword.control.fortran)
 (open_statement "open" @keyword.control.fortran)
 (write_statement "write" @keyword.control.fortran)
 (private_statement "private" @keyword.control.fortran)
 (public_statement "public" @keyword.control.fortran)
+(data_statement "data" @keyword.control.fortran)
 
 (select_case_statement "select" @keyword.control.fortran "case" @keyword.control.fortran)
 (select_type_statement "select" @keyword.control.fortran "type" @keyword.control.fortran)
@@ -205,6 +206,9 @@
 
 (keyword_argument
   name: (identifier) @keyword.control.fortran)
+
+(keyword_statement
+  (identifier) @entity.other.attribute-name.fortran)
 
 (derived_type_member_expression
   (type_member) @variable.other.member.fortran)

@@ -46,4 +46,46 @@ describe("Fortran upstream syntax regressions", () => {
       "program sample\n  x = .&\n    ! comment\n    &5\n  x = 4.5d-&\n    ! comment\n    &2\nend program sample\n",
     );
   });
+
+  it("preserves string content and continuation boundaries", async () => {
+    const root = await parse(
+      "program sample\n  character(len=30) :: text\n" +
+        "  text = '  a&!b'\n  text = \"left&\n    & right\"\nend program sample\n",
+    );
+    const contents = root.descendantsOfType("string_content").map((node) => node.text);
+    expect(contents).toContain("  a&!b");
+    expect(contents).toContain("left");
+    expect(contents).toContain(" right");
+    expect(root.descendantsOfType("string_literal").length).toBe(2);
+  });
+
+  it("parses negative format scale factors and named block labels", async () => {
+    const root = await parse(
+      "program sample\n  outer: block\n    print 100, 1.0\n100 format(-1p,e10.3)\n  end block outer\nend program sample\n",
+    );
+    expect(root.descendantsOfType("block_label").map((node) => node.text)).toEqual([
+      "outer",
+      "outer",
+    ]);
+    expect(root.descendantsOfType("edit_descriptor").map((node) => node.text)).toContain("-1p");
+  });
+
+  it("scopes DATA, ELSE IF THEN and loop-label references", async () => {
+    await parse(
+      "program sample\n  integer :: value\n  data value /1/\n  outer: do\n" +
+        "    if (value == 1) then\n      cycle outer\n    else if (value == 2) then\n" +
+        "      exit outer\n    end if\n  end do outer\nend program sample\n",
+    );
+    for (const [row, text, scope] of [
+      [2, "data", "keyword.control.fortran"],
+      [6, "then", "keyword.control.fortran"],
+      [5, "outer", "entity.other.attribute-name.fortran"],
+    ]) {
+      expect(
+        editor
+          .scopeDescriptorForBufferPosition([row, editor.lineTextForBufferRow(row).indexOf(text)])
+          .getScopesArray(),
+      ).toContain(scope);
+    }
+  });
 });

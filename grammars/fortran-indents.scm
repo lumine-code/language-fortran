@@ -15,6 +15,13 @@
   (#match? @match.next "^[\"']$")
   (#set! indent.match startPosition))
 
+; The scanner keeps continued literal content as named children even when
+; the closing quote is still missing and the parent recovers as ERROR.
+((ERROR (string_content) @preserve)
+  (#is? indent.reindent true)
+  (#set! indent.allowEmpty true)
+  (#set! indent.force true))
+
 ; Preserve the exact contents of multiline literals during explicit reindent.
 ([(string_literal) (comment)] @preserve
   (#is? indent.reindent true)
