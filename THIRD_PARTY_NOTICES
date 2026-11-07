@@ -3,6 +3,9 @@ Source: https://github.com/stadelmanma/tree-sitter-fortran
 Commit: 72f8759dea28ff6671e0868a9ed5ad4a18413917
 Ref: 72f8759dea28ff6671e0868a9ed5ad4a18413917
 
+Parser source: github:stadelmanma/tree-sitter-fortran#72f8759dea28ff6671e0868a9ed5ad4a18413917
+Resolved commit: 72f8759dea28ff6671e0868a9ed5ad4a18413917
+
 Original file: LICENSE
 
 The MIT License (MIT)

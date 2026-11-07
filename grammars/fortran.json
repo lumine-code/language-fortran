@@ -13,7 +13,7 @@
     // line before trusting it — `gh api repos/OWNER/REPO/compare/<ref>...HEAD`
     // reporting `diverged` or a nonzero `behind` means it is not.
     "parserSource": "github:stadelmanma/tree-sitter-fortran#72f8759dea28ff6671e0868a9ed5ad4a18413917",
-    "wasmBuildTool": "tree-sitter-cli#v0.27.1",
+    "wasmBuildTool": "tree-sitter-cli#v0.27.2",
     "grammar": "fortran.wasm",
     "highlightsQuery": "fortran-highlights.scm",
     "injectionsQuery": "fortran-injections.scm",
