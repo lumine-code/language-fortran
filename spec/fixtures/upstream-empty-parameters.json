@@ -1,0 +1,43 @@
+[
+  {
+    "name": "empty function parameter list",
+    "text": "function unit()\nend function unit\n",
+    "parametersCount": 1,
+    "statements": [
+      { "type": "function_statement", "name": "unit", "parameters": { "text": "()", "names": [] } }
+    ]
+  },
+  {
+    "name": "empty subroutine parameter list",
+    "text": "subroutine unit()\nend subroutine unit\n",
+    "parametersCount": 1,
+    "statements": [
+      { "type": "subroutine_statement", "name": "unit", "parameters": { "text": "()", "names": [] } }
+    ]
+  },
+  {
+    "name": "empty entry parameter list",
+    "text": "subroutine container()\nentry alternate()\nend subroutine container\n",
+    "parametersCount": 2,
+    "statements": [
+      { "type": "subroutine_statement", "name": "container", "parameters": { "text": "()", "names": [] } },
+      { "type": "entry_statement", "name": "alternate", "parameters": { "text": "()", "names": [] } }
+    ]
+  },
+  {
+    "name": "nonempty parameters remain named identifiers",
+    "text": "subroutine filled(arg)\ninteger :: arg\nend subroutine filled\n",
+    "parametersCount": 1,
+    "statements": [
+      { "type": "subroutine_statement", "name": "filled", "parameters": { "text": "(arg)", "names": ["arg"] } }
+    ]
+  },
+  {
+    "name": "absent parentheses remain distinct from an empty list",
+    "text": "subroutine bare\nend subroutine bare\n",
+    "parametersCount": 0,
+    "statements": [
+      { "type": "subroutine_statement", "name": "bare", "parameters": null }
+    ]
+  }
+]

@@ -12,7 +12,7 @@
     // Pin a tag or a full SHA, never a branch. Verify the ref is on the main
     // line before trusting it — `gh api repos/OWNER/REPO/compare/<ref>...HEAD`
     // reporting `diverged` or a nonzero `behind` means it is not.
-    "parserSource": "github:stadelmanma/tree-sitter-fortran#72f8759dea28ff6671e0868a9ed5ad4a18413917",
+    "parserSource": "github:stadelmanma/tree-sitter-fortran#d05165a6f0bd044ba1f89865927a752dd5168e66",
     "wasmBuildTool": "tree-sitter-cli#v0.27.2",
     "grammar": "fortran.wasm",
     "highlightsQuery": "fortran-highlights.scm",
